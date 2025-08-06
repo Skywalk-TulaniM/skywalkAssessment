@@ -1,0 +1,14 @@
+﻿from datetime import datetime
+def find_stale(users):
+	stale = []
+	for user in users:
+		if ( getDateDifference(last_login) > 180):
+
+			stale.append(user['email'])
+return stale
+
+def getDateDifference(last_login):
+	now = datetime.now().day
+	last = datetime.strptime(user['last_login'], '%Y-%m-%d').day
+	return now - last
+
